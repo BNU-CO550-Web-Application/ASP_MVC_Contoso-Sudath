@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP_MVC_Contoso.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20221120121404_Initial")]
-    partial class Initial
+    [Migration("20221120204004_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
