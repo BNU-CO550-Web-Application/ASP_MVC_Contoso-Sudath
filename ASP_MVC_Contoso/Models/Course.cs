@@ -7,6 +7,7 @@ namespace ASP_MVC_Contoso.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CourseID { get; set; }
+        public string CodeCode { get; set; }
         public string Title { get; set; }
         public int Credits { get; set; }
 

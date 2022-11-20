@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP_MVC_Contoso.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20221120204004_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20221120233901_initalcreate")]
+    partial class initalcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,9 @@ namespace ASP_MVC_Contoso.Migrations
                 {
                     b.Property<int>("CourseID")
                         .HasColumnType("int");
+
+                    b.Property<string>("CodeCode")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Credits")
                         .HasColumnType("int");

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ASP_MVC_Contoso.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initalcreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,6 +14,7 @@ namespace ASP_MVC_Contoso.Migrations
                 columns: table => new
                 {
                     CourseID = table.Column<int>(type: "int", nullable: false),
+                    CodeCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Credits = table.Column<int>(type: "int", nullable: false)
                 },

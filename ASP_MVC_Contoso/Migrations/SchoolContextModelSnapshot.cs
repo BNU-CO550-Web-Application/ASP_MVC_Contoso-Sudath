@@ -27,6 +27,9 @@ namespace ASP_MVC_Contoso.Migrations
                     b.Property<int>("CourseID")
                         .HasColumnType("int");
 
+                    b.Property<string>("CodeCode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Credits")
                         .HasColumnType("int");
 
