@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP_MVC_Contoso.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20221121001732_initalcreate")]
-    partial class initalcreate
+    [Migration("20221121090949_intialcreate")]
+    partial class intialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -81,10 +81,14 @@ namespace ASP_MVC_Contoso.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FirstMidName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("ID");
 

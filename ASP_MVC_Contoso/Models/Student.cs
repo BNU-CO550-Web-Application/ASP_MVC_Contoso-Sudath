@@ -20,7 +20,7 @@ namespace ASP_MVC_Contoso.Models
         [DisplayName("Last Name")]
         public string FullName()
         {
-            return FirstMidName + "" + LastName;
+            return FirstMidName + " " + LastName;
         }
     }
 }
