@@ -1,10 +1,11 @@
 ﻿@model ASP_MVC_Contoso.Models.Student
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Student Details";
 }
+@*<h1>@Model.Student.FullName() Module Rusult</h1>*@
 
-<h1>Details</h1>
+<h1>Student Details</h1>
 
 <div>
     <h4>Student</h4>
@@ -27,6 +28,32 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Enrollments)
+        </dt>
+        <dd class="col-sm-5">
+            <table class="table table-responsive table-hover table-bordered">
+                <tr class="bg-info">
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Grade</th>
+                </tr>
+                @foreach (var item in Model.Enrollments)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelitem => item.Course.CourseCode)
+                       </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Course.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Grade)
+                        </td>
+                    </tr>
+                }
+            </table>
         </dd>
     </dl>
 </div>

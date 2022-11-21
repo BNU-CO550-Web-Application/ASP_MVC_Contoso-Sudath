@@ -34,14 +34,14 @@ namespace ASP_MVC_Contoso.Data
             context.SaveChanges();
             var courses = new Course[]
             {
-                new Course{CourseID=10550,CodeCode="CO550",Title="Web Application",Credits=3},
-                new Course{CourseID=10556,CodeCode="CO556",Title="Network System",Credits=3},
-                new Course{CourseID=10558,CodeCode="CO558",Title="Database Design",Credits=3},
-                new Course{CourseID=10567,CodeCode="CO567",Title="Object Oriented System",Credits=4},
-                new Course{CourseID=10551,CodeCode="CO551",Title="Open Source System",Credits=4},
-                new Course{CourseID=10565,CodeCode="CO565",Title="Web Services",Credits=3},
-                new Course{CourseID=10566,CodeCode="CO566",Title="Mobile System",Credits=4},
-                new Course{CourseID=10557,CodeCode="CO557",Title="Software Engineering",Credits=4}
+                new Course{CourseID=10550,CourseCode="CO550",Title="Web Application",Credits=3},
+                new Course{CourseID=10556,CourseCode="CO556",Title="Network System",Credits=3},
+                new Course{CourseID=10558,CourseCode="CO558",Title="Database Design",Credits=3},
+                new Course{CourseID=10567,CourseCode="CO567",Title="Object Oriented System",Credits=4},
+                new Course{CourseID=10551,CourseCode="CO551",Title="Open Source System",Credits=4},
+                new Course{CourseID=10565,CourseCode="CO565",Title="Web Services",Credits=3},
+                new Course{CourseID=10566,CourseCode="CO566",Title="Mobile System",Credits=4},
+                new Course{CourseID=10557,CourseCode="CO557",Title="Software Engineering",Credits=4}
             };
 
             context.Courses.AddRange(courses);

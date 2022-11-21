@@ -28,7 +28,7 @@ namespace ASP_MVC_Contoso.Controllers
         // GET: Students/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Students == null)
+            if (id == null)
             {
                 return NotFound();
             }
