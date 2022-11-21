@@ -1,15 +1,22 @@
 ﻿@model IEnumerable<ASP_MVC_Contoso.Models.Student>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Student Information";
 }
 
-<h1>Index</h1>
+<div class="text-center">
+    <h1 class="display-4">Razor Contoso</h1>
+    <h2>By sudath Nawagamuwage</h2>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<h2>Student Lists</h2>
+
+<div class ="btn btn-group-sm">
+    <a class="btn btn-primary m-md-1" asp-action="Create">Add Student</a>
+</div>
+<table class="table table-responsive table-hover table-bordered">
+    <thead>
+        <tr class="table-active">
     <thead>
         <tr>
             <th>
@@ -36,10 +43,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EnrollmentDate)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            <td class="btn btn-group-sm">
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                <a class="btn btn-success" asp-action="Details" asp-route-id="@item.ID">Details</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }
